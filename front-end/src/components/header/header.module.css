@@ -6,24 +6,27 @@
 
 .bigScreen{
     background-color: red;
-    /* width:303px;
-    height: 204px; */
+    width:100%;
+    height: 204px;
 }
 .smallScreen{
     background-color: yellow;
     display: flex;
     justify-content: center;
     align-items: center;
+    width:100%;
+    height: 120px;
 }
 
-.imgContainer{
-    width:303px;
-    height: 204px;
-}
 
-.imgContainer img{
+.imgContainer .logoLarge{
     object-fit: contain;
     width: 303px;
     height: 204px;
+}
+.imgContainer .logoSmall{
+    object-fit: contain;
+    width: 200px;
+    height: auto;
 }
  

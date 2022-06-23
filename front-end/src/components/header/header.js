@@ -20,9 +20,9 @@ function Header(){
       >
         <div className={style.imgContainer}>
           {width > 500 ? (
-            <img src={logoLarge} alt="what" />
+            <img className={style.logoLarge} src={logoLarge} alt="what" />
           ) : (
-            <img src={logoSmall} alt="what" />
+            <img className={style.logoSmall} src={logoSmall} alt="what" />
           )}
         </div>
       </div>
