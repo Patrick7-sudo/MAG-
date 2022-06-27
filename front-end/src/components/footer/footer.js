@@ -8,7 +8,7 @@ function Footer(){
 
    const [width, setWidth] = useState(500 || contextData.width);
 
-   const [height, setHeight] = useState(500 || contextData.height);
+  //  const [height, setHeight] = useState(500 || contextData.height);
 
   useEffect(() => {
     if (contextData !== undefined) {
