@@ -9,8 +9,8 @@ import React , {useState,useEffect} from 'react';
 export const PersonContext = React.createContext();
 
 function App() {
-  const [width, setWidth] = useState("");
-  const [height, setHeight] = useState("");
+  const [width, setWidth] = useState(500);
+  const [height, setHeight] = useState(500);
 
   // dynamic Width
   useEffect(() => {
@@ -32,7 +32,7 @@ function App() {
 
   return (
     <PersonContext.Provider value={{ width, height }}>
-      <div className="App">
+      <div className="App" data-testid="mainProjectWrapper">
         <Header />
         <Body />
         <Footer />

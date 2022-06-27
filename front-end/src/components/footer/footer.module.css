@@ -1,0 +1,36 @@
+.mainFooterContainer{
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    
+}
+
+.mainFooterContainer img{
+    width:600px;
+    /* background-color: beige; */
+}
+
+.flipImg{
+    transform: scaleX(-1);
+}
+
+@media screen and (max-width: 1440px){
+    .mainFooterContainer img{
+        width:400px;
+        /* background-color: aqua; */
+    }
+}
+
+@media screen and (max-width: 900px){
+    .mainFooterContainer img{
+        width:300px;
+        /* background-color: aqua; */
+    }
+}
+
+@media screen  and (max-width: 600px){
+    .mainFooterContainer{
+        display: none;
+    }
+}
