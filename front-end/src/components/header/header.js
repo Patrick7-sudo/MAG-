@@ -15,7 +15,7 @@ function Header(){
   useEffect(()=>{
     if(contextData !== undefined){
       setWidth(contextData.width)
-      setHeight(contextData.height)
+      // setHeight(contextData.height)
     }
   },[contextData])
   
