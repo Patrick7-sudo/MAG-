@@ -30,7 +30,7 @@ function Header(){
           className={style.imgContainer}
           data-testid="headerComponentLogoHolder"
         >
-          {width > 500 ? (
+          {width > 900 ? (
             <img
               className={style.logoLarge}
               src={logoLarge}

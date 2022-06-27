@@ -4,11 +4,16 @@
     height:204px;
 }
 
+
 .bigScreen{
     background-color: red;
     width:100%;
     height: 204px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .smallScreen{
     background-color: yellow;
     display: flex;
