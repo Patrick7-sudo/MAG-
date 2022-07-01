@@ -9,9 +9,7 @@
     background-color: red;
     width:100%;
     height: 204px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
 }
 
 .smallScreen{
@@ -21,6 +19,14 @@
     align-items: center;
     width:100%;
     height: 120px;
+}
+
+@media screen and (max-width:900px) {
+    .bigScreen{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 

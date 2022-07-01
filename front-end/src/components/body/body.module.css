@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Glegoo:wght@700&display=swap');
+
+:root{
+    --h1-font: 118.7px;
+    --h2-font: 83.9px;
+    --h3-font: 59.4px;
+    --h4-font: 42px;
+    --h5-font: 29.7px;
+    --h6-font: 21px;
+    --p-font: 21px;
+}
+
+@media screen  and (max-width: 1200px){
+    :root{
+        --h4-font: 21px
+    }
+}
+
+.bodyMainContainer{
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 500px;
+}
+.mainContainer{
+    width: 70%;
+    height: 80%;
+    background-color: white;
+    border-radius: 25px;
+    overflow: hidden;
+    border:2px solid #0C70E8;
+}
+
+/* Tagline */
+.tagLine{
+    width: 100%;
+    height: 20%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    
+}
+.tagLine p{
+    color: #0C70E8;
+    font-size: var(--h4-font);
+    font-weight: 700;
+    line-height: 75.29px;
+    text-transform: capitalize;
+    font-family: 'Glegoo',serif;
+}
+
+/* end of tagline */
+
+/* start of option holder */
+.optionsHolder{
+    background-color: red;
+    height: 50%;
+    width:100%;
+    /* display: flex;
+    justify-content: space-evenly;
+    align-items: center; */
+}
+.formContainer{
+     display: flex;
+     flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.optionsMain{
+    background-color: #0C70E8;
+    height:52px;
+    width:90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 50px;
+}
+
+.optionsMain label{
+    color:white;
+    font-size: var(--h6-font);
+    background-color: blueviolet;
+}
+.optionsMain input{
+    background-color: pink;
+    color:yellow;
+    font-size: var(--h1-font);
+}
+
+.radioButton{
+    background-color: blueviolet;
+}
+/* end of start of option holder */
+
+@media screen  and (max-width: 900px){
+    .bodyMainContainer{
+        min-height: 500px;
+    }
+    .tagLine p{
+        font-size: var(--h6-font);
+    }
+}
+
+@media screen  and (max-width: 600px){
+    .bodyMainContainer{
+        width: 100%;
+        height: 100%;
+    }
+    .mainContainer{
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+        border: none;
+    }
+    /* tagline */
+    .tagLine{
+        height: 15%;
+        background-color: #0C70E8;
+    }
+    .tagLine p{
+        font-size: var(--h6-font);
+        color:white;
+    }
+    /* end of tagline */
+}

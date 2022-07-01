@@ -22,7 +22,7 @@ function Header(){
     return (
       <div
         className={`${style.headerComponentHolder} ${
-          width > 500 ? style.bigScreen : style.smallScreen
+          width > 900 ? style.bigScreen : style.smallScreen
         }`}
         data-testid="headerComponentHolder"
       >

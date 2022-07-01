@@ -1,4 +1,4 @@
-import city from "../../cityline.png"
+import city from "../../cityline1.png"
 import style from "./footer.module.css"
 import { useState, useContext, useEffect } from "react";
 import { PersonContext } from "../../App";
@@ -18,8 +18,8 @@ function Footer(){
   }, [contextData]);
 
     return (
-      <div className={style.mainFooterContainer} style={{width:`${width}px`}} data-testid="footerMainContainerWrapper">
-        <img src={city} alt="city-right-logo"></img>
+      <div className={style.mainFooterContainer} data-testid="footerMainContainerWrapper">
+        <img src={city} alt="city-right-logo">{width}</img>
         <img src={city} alt="city-right-logo" className={style.flipImg}></img>
       </div>
     );

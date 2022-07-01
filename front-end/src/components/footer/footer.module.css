@@ -3,12 +3,16 @@
     display: flex;
     justify-content: space-between;
     overflow: hidden;
+    width:100%;
+    min-height:150px;
+
     
 }
 
 .mainFooterContainer img{
     width:600px;
     /* background-color: beige; */
+    min-height: 100%;
 }
 
 .flipImg{
@@ -17,8 +21,25 @@
 
 @media screen and (max-width: 1440px){
     .mainFooterContainer img{
-        width:400px;
+        width:500px;
         /* background-color: aqua; */
+    }
+
+    .mainFooterContainer{
+    background-color: aquamarine;
+    min-height:100px;   
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .mainFooterContainer img{
+        width:400px;
+        /* background-color: pink; */
+    }
+
+    .mainFooterContainer{
+    background-color: aquamarine;
+    min-height:100px;   
     }
 }
 
