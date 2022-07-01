@@ -1,6 +1,7 @@
 import style from "./body.module.css"
 import {useState} from 'react'
 // import { PersonContext } from "../../App";
+// , useEffect, useContext
 function Body(){
     const [showAirlines,setShowAirlines]=useState(false);
     const [showAirport, setShowAirport] = useState(true);
