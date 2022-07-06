@@ -368,10 +368,10 @@
   
 }
 
-@media screen and (max-width:500px){
-    .bodyMainContainer{
+@media screen and (max-width:450px){
+    /* .bodyMainContainer{
         min-height: auto;
-    }
+    } */
      .inputHolders{
         height: 10%;
         min-height: 200px;
