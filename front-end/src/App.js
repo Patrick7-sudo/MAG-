@@ -8,8 +8,8 @@ import React, {useState,useEffect} from 'react';
 export const PersonContext = React.createContext();
 
 function App() {
-  const [width, setWidth] = useState(500);
-  const [height, setHeight] = useState(500);
+  const [width, setWidth] = useState("");
+  const [height, setHeight] = useState("");
   // dynamic Width
   useEffect(() => {
     function width() {

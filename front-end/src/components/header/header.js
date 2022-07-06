@@ -8,7 +8,7 @@ function Header(){
 
 
   // const [height, setHeight] = useState(500 || contextData.height);
- const [width, setWidth] = useState(500);
+ const [width, setWidth] = useState("");
 
    useEffect(() => {
      function width() {
