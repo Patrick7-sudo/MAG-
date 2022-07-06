@@ -30,8 +30,14 @@ function App() {
 
   return (
     <PersonContext.Provider value={{ width, height }}>
-      <div className={style.websiteContainer} style={{width:`${width}px`,height:`${height}px`}}data-testid="mainProjectWrapper">
-        <Header />
+      <div
+        className={style.websiteContainer}
+        style={{ width: `${width}px`, height: `${height}px` }}
+        data-testid="mainProjectWrapper"
+      >
+        <div className={style.header}>
+          <Header />
+        </div>
         <Body />
         <Footer />
       </div>
