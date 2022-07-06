@@ -370,13 +370,16 @@
 
 @media screen and (max-width:500px){
      .inputHolders{
-        height: 30%;
+        height: 10%;
         /* background-color: yellowgreen; */
         padding-top: 0;
         justify-content: space-around;
     }
     .inputHolders p{
         font-size: 15px;
+    }
+    .tagLine{
+        height: 10%;
     }
 
     .inputHolders input{
