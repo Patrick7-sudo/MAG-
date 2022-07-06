@@ -138,7 +138,13 @@ function Body(){
                     </label>
                   ) : null}
                 </div>
-                <input type="submit" Value="submit" className={style.buttonSubmitForm}/>
+                <div className={style.submitBtnHolder}>
+                  <input
+                    type="submit"
+                    Value="submit"
+                    className={style.buttonSubmitForm}
+                  />
+                </div>
               </form>
             </div>
           </div>
