@@ -59,17 +59,24 @@
 /* start of option holder */
 .optionsHolder{
     background-color: red;
-    height: 50%;
+    height: 80%;
     width:100%;
     /* display: flex;
-    justify-content: space-evenly;
-    align-items: center; */
+    justify-content: center; */
+}
+.optionsHolderContainer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 }
 .formContainer{
      display: flex;
      flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    width: 100%;
+    height: 100%;
 }
 .optionsMain{
     background-color: #0C70E8;
@@ -79,23 +86,126 @@
     justify-content: space-evenly;
     align-items: center;
     border-radius: 50px;
+    flex-direction: row;
 }
 
 .optionsMain label{
     color:white;
     font-size: var(--h6-font);
-    background-color: blueviolet;
+    /* background-color:pink; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding:.1rem; */
+    
 }
-.optionsMain input{
+.optionsMain label input{
     background-color: pink;
     color:yellow;
     font-size: var(--h1-font);
+    display: none;
 }
 
 .radioButton{
-    background-color: blueviolet;
+    background-color: green;
+}
+.customButton{
+    position: relative;
+    background-color: white;
+    min-height: 15px;
+    min-width: 15px;
+    height: 15px;
+    width: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding:.1rem;
+    margin-right: .2rem;
+    border:1px solid #0C70E8;
+}
+/* .optionsMain input:checked ~ .customButton{
+  background-color: #2196F3;
+} */
+/* .optionsMain input:checked ~ .customButton::after{
+  background-color: orange;
+} */
+.optionsMain input:checked ~ .customButton .round{
+    /* top: 9px;
+	left: 9px; */
+    height: 12px;
+    width: 12px;
+	border-radius: 50%;
+	background:#0C70E8;
 }
 /* end of start of option holder */
+/* input holder */
+.inputHolders{
+    background-color: pink;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     min-height: 50px;
+}
+.inputHolders label{
+    width:50%;
+    /* padding:1rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.inputHolders p{
+    background-color: aqua;
+    font-size: var(--p-font);
+    width:80%;
+    padding-left: .5rem;
+}
+.inputHolders input{
+    background-color: white;
+    width: 80%;
+    height: 50px;
+    border:2px solid #0C70E8;
+    padding-left: .5rem;
+    /* text-align: center; */
+}
+/* end of input holder */
+
+/* submit button */
+.buttonSubmitForm{
+    width:400px;
+    height: 48px;
+    border-radius: 50px;
+    background-color: white;
+    
+    color:#0C70E8;
+    font-size: var(--h6-font);
+    text-transform: uppercase;
+    transition: all 1s linear;
+    border: 1px solid white;
+     min-height: 48px;
+}
+
+.buttonSubmitForm:hover{
+    width:400px;
+    height: 48px;
+    border-radius: 50px;
+    /* border:none; */
+    background-color:  #0C70E8;
+    color:white;
+    font-size: var(--h6-font);
+    text-transform: uppercase;
+    transition: all 1s linear;
+    border: 1px solid white;
+}
+.buttonSubmitForm:active{
+    transform:translateY(4px);
+    transition: all 0.1s linear;
+}
+/* end of submit button */
 
 @media screen  and (max-width: 900px){
     .bodyMainContainer{
@@ -117,6 +227,9 @@
         border-radius: 0px;
         border: none;
     }
+    .inputHolders{
+        height: 50%;
+    }
     /* tagline */
     .tagLine{
         height: 15%;
@@ -127,4 +240,44 @@
         color:white;
     }
     /* end of tagline */
+    /* start for options holder */
+    .optionsMain{
+        background-color: white;
+        border-radius: 0px;
+        height: auto;
+        width: 100%;
+        
+        flex-direction: column;
+        
+        align-items: center;
+        padding-bottom:.5rem;
+        padding-top:.5rem;
+    }
+    .optionsMainIndividual{
+        background-color: aqua;
+        width:80%;
+        min-height: 50px;
+        text-align: center;
+    }
+    .optionsMain label{
+        /* background-color: transparent; */
+        justify-content: space-between;
+        /* padding-top:1.5rem;  */
+        text-align: left;
+        
+    }
+    .labelText{
+        color: #232929;
+        width:80%;
+        text-align: start;
+    }
+    .inputHolders{
+        flex-direction: column;
+    }
+
+    .inputHolders label{
+        width:100%;
+
+    }
+  
 }

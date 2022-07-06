@@ -64,51 +64,81 @@ function Body(){
           {/* end of the tagline */}
           {/* the option of the tagline */}
           <div className={style.optionsHolder}>
-            <div>
+            <div className={style.optionsHolderContainer}>
               <form action="" className={style.formContainer}>
                 <div className={style.optionsMain}>
-                  <input
-                    type="radio"
-                    id="airport"
-                    name="lagradio"
-                    value="airport"
-                    checked={showAirport === true}
-                    onChange={airportInput}
-                  />
-                  <label htmlFor="airport">Airport</label>
+                  {/* first option */}
+                  <div className={style.optionsMainIndividual}>
+                    <label htmlFor="airport">
+                      <input
+                        type="radio"
+                        id="airport"
+                        name="lagradio"
+                        value="airport"
+                        checked={showAirport === true}
+                        onChange={airportInput}
+                      />
+                      <div className={style.customButton}>
+                        <div className={style.round}></div>
+                      </div>
+                      <div className={style.labelText}>Airport</div>
+                    </label>
+                  </div>
+                  {/* end first option */}
 
-                  <input
-                    type="radio"
-                    id="airlines"
-                    name="lagradio"
-                    value="airlines"
-                    onChange={airlinesInput}
-                  />
-                  <label htmlFor="airlines">Airlines</label>
+                  {/* second options */}
+                  <div className={style.optionsMainIndividual}>
+                    <label htmlFor="airlines">
+                      <input
+                        type="radio"
+                        id="airlines"
+                        name="lagradio"
+                        value="airlines"
+                        onChange={airlinesInput}
+                      />
+                      <div className={style.customButton}>
+                        <div className={style.round}></div>
+                      </div>
+                      <div className={style.labelText}>Airlines</div>
+                    </label>
+                  </div>
+                  {/* end of second options */}
 
-                  <input
-                    type="radio"
-                    id="airportsairlines"
-                    name="lagradio"
-                    value="airportaairlines"
-                    onChange={bothInput}
-                  />
-
-                  <label htmlFor="airportsairlines">Airport + Airlines</label>
+                  {/* third options */}
+                  <div className={style.optionsMainIndividual}>
+                    <label htmlFor="airportsairlines">
+                      <input
+                        type="radio"
+                        id="airportsairlines"
+                        name="lagradio"
+                        value="airportaairlines"
+                        onChange={bothInput}
+                      />
+                      <div className={style.customButton}>
+                        <div className={style.round}></div>
+                      </div>
+                      <div className={style.labelText}>Airport + Airlines</div>
+                    </label>
+                  </div>
+                  {/* End of third options */}
                 </div>
 
-                {showAirlines || showBoth ? (
-                  <input type="text" />
-                ) : (
-                  <h1>airlines</h1>
-                )}
+                <div className={style.inputHolders}>
+                  {showAirlines || showBoth ? (
+                    <label>
+                      <p>Airlines :</p>
+                      <input type="text" placeholder="E.g BA"></input>
+                    </label>
+                  ) : null}
 
-                {showAirport || showBoth ? (
-                  <input type="text" />
-                ) : (
-                  <h1>airport</h1>
-                )}
-
+                  {showAirport || showBoth ? (
+                    <label>
+                      <p>Airport :</p>
+                      <input type="text" placeholder="E.g LHR"></input>
+                    </label>
+                  ) : null}
+                </div>
+                <input type="submit" Value="submit" className={style.buttonSubmitForm}/>
               </form>
             </div>
           </div>
