@@ -217,6 +217,16 @@
     transition: all 0.1s linear;
 }
 /* end of submit button */
+@media screen  and (min-width: 1500px){
+    .mainContainer{
+        width:50%;
+    }
+}
+@media screen  and (max-width: 1300px){
+    .mainContainer{
+        width:70%;
+    }
+}
 
 @media screen  and (max-width: 900px){
     .bodyMainContainer{
