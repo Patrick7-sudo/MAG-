@@ -1,23 +1,22 @@
 import style from "./header.module.css"
 import logoLarge from '../../Group 5.svg'
-import {useState,useContext,useEffect} from 'react';
-import { PersonContext } from "../../App";
+import {useState,useEffect} from 'react';
+
 import logoSmall from '../../Group 4.svg';
 
 function Header(){
-  const contextData = useContext(PersonContext);
-  
-  const [width,setWidth] =useState(500 || contextData.width);
+
 
   // const [height, setHeight] = useState(500 || contextData.height);
- 
+ const [width, setWidth] = useState(500);
 
-  useEffect(()=>{
-    if(contextData !== undefined){
-      setWidth(contextData.width)
-      // setHeight(contextData.height)
-    }
-  },[contextData])
+   useEffect(() => {
+     function width() {
+       setWidth(window.innerWidth);
+     }
+     window.addEventListener("resize", width);
+     width();
+   }, [width]);
   
     return (
       <div
