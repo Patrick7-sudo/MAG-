@@ -61,6 +61,7 @@
     background-color: red;
     height: 80%;
     width:100%;
+    
     /* display: flex;
     justify-content: center; */
 }
@@ -69,6 +70,7 @@
     justify-content: center;
     width: 100%;
     height: 100%;
+   
 }
 .formContainer{
      display: flex;
@@ -77,6 +79,7 @@
     align-items: center;
     width: 100%;
     height: 100%;
+
 }
 .optionsMain{
     background-color: #0C70E8;
@@ -186,7 +189,7 @@
     text-transform: uppercase;
     transition: all 1s linear;
     border: 1px solid white;
-     min-height: 48px;
+    min-height: 48px;
 }
 
 .buttonSubmitForm:hover{
@@ -277,7 +280,9 @@
 
     .inputHolders label{
         width:100%;
-
+    }
+    .buttonSubmitForm{
+        width:300px;
     }
   
 }
