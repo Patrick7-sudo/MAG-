@@ -324,7 +324,7 @@
     }
     .inputHolders{
         height: 50%;
-        /* background-color: blue; */
+        background-color: #E5FBFB;
     }
     /* tagline */
     .tagLine{
@@ -365,7 +365,7 @@
         height: 30%;
         /* background-color: yellowgreen; */
         padding-top: 0;
-        justify-content: flex-start;
+        justify-content: space-around;
     }
     .inputHolders p{
         font-size: 15px;
