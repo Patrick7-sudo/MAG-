@@ -368,19 +368,25 @@
   
 }
 
-@media screen and (max-width:450px){
+@media screen and (max-width:500px){
     .bodyMainContainer{
         min-height: auto;
     }
      .inputHolders{
         height: 10%;
+        min-height: 200px;
         /* background-color: yellowgreen; */
-        padding-top: 0;
+        padding: 0;
         justify-content: space-around;
 
     }
+    /* .inputHolders label{
+        background-color: pink;
+        justify-content: flex-start;
+    } */
     .inputHolders p{
         font-size: 15px;
+        margin-top: 0;
     }
     .tagLine{
         height: 10%;
