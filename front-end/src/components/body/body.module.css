@@ -313,7 +313,7 @@
     }
     .inputHolders{
         height: 50%;
-        background-color: blue;
+        /* background-color: blue; */
     }
     /* tagline */
     .tagLine{
@@ -332,13 +332,13 @@
         height: auto;
         width: 100%;
         flex-direction: column;
-        background-color: yellow;
+        /* background-color: yellow; */
         align-items: center;
         padding-bottom:.5rem;
         padding-top:.5rem;
     }
     .optionsMainIndividual{
-        background-color: aqua;
+        /* background-color: aqua; */
         width:80%;
         min-height: 50px;
         text-align: center;
@@ -349,10 +349,10 @@
   
 }
 
-@media screen and (max-width:400px){
+@media screen and (max-width:500px){
      .inputHolders{
         height: 30%;
-        background-color: yellowgreen;
+        /* background-color: yellowgreen; */
         padding-top: 0;
     }
     .inputHolders p{
@@ -361,6 +361,6 @@
 
     .inputHolders input{
         width: 80%;
-        height: 25px;
+        height: 30px;
     }
 }
