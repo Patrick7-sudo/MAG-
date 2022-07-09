@@ -1,5 +1,6 @@
 import style from "./body.module.css"
 import {useState} from 'react'
+import {Link} from 'react-router-dom';
 // import { PersonContext } from "../../App";
 // , useEffect, useContext
 function Body(){
@@ -178,11 +179,13 @@ function Body(){
                   ) : null}
                 </div>
                 <div className={style.submitBtnHolder}>
-                  <input
-                    type="submit"
-                    value="submit"
-                    className={style.buttonSubmitForm}
-                  />
+                  <Link to="/main">
+                    <input
+                      type="submit"
+                      value="submit"
+                      className={style.buttonSubmitForm}
+                    />
+                  </Link>
                 </div>
               </form>
             </div>
