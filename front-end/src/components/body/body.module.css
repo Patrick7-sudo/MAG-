@@ -32,7 +32,7 @@
     border-radius: 25px;
     overflow: hidden;
     border:2px solid #0C70E8;
-    min-height: 00px;
+    /* min-height: 00px; */
 }
 
 /* Tagline */
@@ -368,7 +368,7 @@
   
 }
 
-@media screen and (max-width:450px){
+@media screen and (max-width:550px){
     /* .bodyMainContainer{
         min-height: auto;
     } */
