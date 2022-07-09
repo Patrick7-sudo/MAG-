@@ -6,6 +6,8 @@ function Body(){
     const [showAirlines,setShowAirlines]=useState(false);
     const [showAirport, setShowAirport] = useState(true);
     const [showBoth, setShowBoth] =useState(false);
+    const [airlineInputField,setAirlineInputField] = useState("");
+    const [airportInputField, setAirportInputField] = useState("");
 
 
     //function for dynamic input field form
@@ -53,6 +55,25 @@ function Body(){
           // end of radio to checked for airport options
         
         }
+
+        // function
+        // function dataInput(){
+        //   console.log()
+        // }
+
+        function handleSubmit (e) {
+           e.preventDefault();
+           
+           const dataToUse = []
+           if(airlineInputField !== "" || airportInputField !== ""){
+              dataToUse.push({airline:airlineInputField,airport:airportInputField})
+           }
+           console.log(dataToUse)
+           setAirlineInputField("")
+           setAirportInputField("")
+           console.log(airlineInputField);
+           console.log(airportInputField);
+         };
     
     return (
       <div className={style.bodyMainContainer}>
@@ -65,7 +86,11 @@ function Body(){
           {/* the option of the tagline */}
           <div className={style.optionsHolder}>
             <div className={style.optionsHolderContainer}>
-              <form action="" className={style.formContainer}>
+              <form
+                action=""
+                className={style.formContainer}
+                onSubmit={handleSubmit}
+              >
                 <div className={style.optionsMain}>
                   {/* first option */}
                   <div className={style.optionsMainIndividual}>
@@ -127,21 +152,35 @@ function Body(){
                   {showAirlines || showBoth ? (
                     <label>
                       <p>Airlines :</p>
-                      <input type="text" placeholder="E.g BA"></input>
+                      <input
+                        type="text"
+                        placeholder="E.g BA"
+                        onChange={(event) =>
+                          setAirlineInputField(event.target.value)
+                        }
+                        value={airlineInputField}
+                      ></input>
                     </label>
                   ) : null}
 
                   {showAirport || showBoth ? (
                     <label>
                       <p>Airport :</p>
-                      <input type="text" placeholder="E.g LHR"></input>
+                      <input
+                        type="text"
+                        placeholder="E.g LHR"
+                        onChange={(event) =>
+                          setAirportInputField(event.target.value)
+                        }
+                        value={airportInputField}
+                      ></input>
                     </label>
                   ) : null}
                 </div>
                 <div className={style.submitBtnHolder}>
                   <input
                     type="submit"
-                    Value="submit"
+                    value="submit"
                     className={style.buttonSubmitForm}
                   />
                 </div>

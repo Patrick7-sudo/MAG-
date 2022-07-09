@@ -1,0 +1,230 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+:root{
+    --h1-font: 118.7px;
+    --h2-font: 83.9px;
+    --h3-font: 59.4px;
+    --h4-font: 42px;
+    --h5-font: 29.7px;
+    --h6-font: 21px;
+    --p-font: 21px;
+}
+
+@media screen and (max-width:1200px){
+  :root{
+    --h1-font: 64px;
+    --h2-font: 52px;
+    --h3-font: 41px;
+    --h4-font: 33px;
+    --h5-font: 26px;
+    --h6-font: 21px;
+    --p-font: 16px;
+}
+}
+
+@media screen and (max-width:600px){
+  :root{
+    --h1-font: 55px;
+    --h2-font: 44px;
+    --h3-font: 35px;
+    --h4-font: 28px;
+    --h5-font: 23px;
+    --h6-font: 18px;
+    --p-font: 14px;
+}
+}
+
+@media screen and (max-width:450px){
+  :root{
+    --h1-font: 49px;
+    --h2-font: 39px;
+    --h3-font: 31px;
+    --h4-font: 25px;
+    --h5-font: 20px;
+    --h6-font: 16px;
+    --p-font: 13px;
+}
+}
+
+
+.MainContainer{
+    background-color: aqua;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+}
+.headerContainer{
+    background-color: antiquewhite;
+    /* min-height:46px; */
+    width:90%;
+}
+.mainContentContainer{
+    /* background-color: red; */
+    min-height:600px;
+    width:90%;
+}
+.contentSearchContainer{
+    background-color: aquamarine;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width:50%;
+    /* margin-left:2rem; */
+    
+    font-family: 'Glegoo'; 
+}
+.contentSearchContainerHeading{
+    font-size: var(--h4-font);
+    color: #0C70E8;
+    margin:0;
+}
+
+.inputContainerDisplay{
+    /* background-color: red; */
+    display: flex;
+    width:40%;
+    justify-content: space-between;
+   
+}
+.contentSearchContainerPara{
+    font-size: var(--p-font);
+    color:#232929;
+    margin-right:.5rem;
+}
+
+.mainContentDataContainer{
+    background-color: blue;
+   
+    
+}
+.mainContentDataLabelContainer {
+    background-color: yellow;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Glegoo'; 
+    text-align: center;
+}
+.mainContentDataLabelContainer p{
+    width:16%;
+}
+.mainContentData{
+    background-color: pink;
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Glegoo';
+    text-align: center;
+    overflow-wrap: break-word;
+}
+.mainContentData p{
+    width:16%;
+}
+
+.smallScreenmainContentDataContainer{
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    flex-direction: column;
+}
+.smallScreenmainContentIndividualContainer{
+    background-color: pink;
+    width:50%;
+    display: flex;
+    flex-direction: column;
+     margin-bottom:1rem;
+   
+}
+.smallScreenmainAirlineContainer{
+    background-color: orange;
+    display: flex;
+    justify-content: space-between;
+    
+
+}
+
+.smallScreenmainAirlineContainer p{
+    margin:10px;
+}
+
+@media screen and (min-width:1000px){
+    .contentSearchContainer{
+        width: 80;
+        /* flex-direction: column;
+        align-items: flex-start;
+        margin-left: 0; */
+    
+    }
+}
+
+@media screen and (max-width:900px){
+    .contentSearchContainer{
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 0;
+    
+    }
+
+    .contentSearchContainerHeading{
+        margin-left:15px;
+    }
+    .contentSearchContainerPara{
+        margin-left:15px;
+    }
+    .smallScreenmainContentIndividualContainer{
+        width:70%;
+    }
+}
+
+@media screen and (max-width:600px){
+    .contentSearchContainer{
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 0;
+    
+    }
+
+    .contentSearchContainerHeading{
+        /* margin-left:15px; */
+    }
+    .contentSearchContainerPara{
+        /* margin-left:15px; */
+        margin-top: .5rem;
+    }
+    .smallScreenmainContentIndividualContainer{
+        width:90%;
+    }
+}
+
+@media screen and (max-width:550px){
+    /* .headerContainer{
+        width:100%;
+    } */
+    .mainContentContainer{
+        width: 90%;
+    }
+    .contentSearchContainer{
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 0;
+    
+    }
+
+    .contentSearchContainerHeading{
+        margin-left:15px;
+    }
+    .contentSearchContainerPara{
+        margin-left:15px;
+        
+    }
+    .smallScreenmainContentIndividualContainer{
+        width:80%;
+    }
+}

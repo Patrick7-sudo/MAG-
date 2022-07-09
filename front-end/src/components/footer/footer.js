@@ -1,7 +1,7 @@
 import city from "../../cityline1.png"
 import style from "./footer.module.css"
 import { useState, useContext, useEffect } from "react";
-import { PersonContext } from "../../App";
+import { PersonContext } from "../HomepageStuff/Homepage";
 
 function Footer(){
    const contextData = useContext(PersonContext);
