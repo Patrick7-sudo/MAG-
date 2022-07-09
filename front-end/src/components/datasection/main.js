@@ -2,10 +2,21 @@
 import style from "./main.module.css";
 import {useState,useEffect} from "react";
 import Header from "../header/header";
+import {useNavigate} from "react-router-dom";
+
 
 function Main(){
     const [width, setWidth] =useState("");
     const [height, setHeight] = useState("");
+    const navigate = useNavigate();
+    // function link delay
+    function linkDelayed(){
+        setTimeout(() => {
+           navigate("/");
+        }, 500);
+        console.log("link clicked")
+    }
+    // end of function delay 
 
     useEffect(()=>{
         function widthDynamic(){
@@ -191,7 +202,11 @@ function Main(){
           {/* data display  */}
 
           {/* search again container */}
-
+          <div className={style.buttonHolder}>
+           
+              <button className={style.buttonSearchAgain} onClick={()=>linkDelayed()}>Search Again</button>
+            
+          </div>
           {/* end of search again container */}
         </div>
         {/* End of main/contaienr */}

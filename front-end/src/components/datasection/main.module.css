@@ -151,6 +151,36 @@
     margin:10px;
 }
 
+.buttonHolder{
+    background-color: aquamarine;
+    /* min-height:200px; */
+    display: flex;
+    justify-content: flex-end;
+}
+.buttonSearchAgain{
+    margin:.5rem;
+    width:250px;
+    height:35px;
+    border-radius: 50px;
+    border: 1px solid #0C70E8;
+    color:#0C70E8;
+    background-color: white;
+    font-size: var(--h6-font);
+    transition: all 1s linear;
+}
+
+.buttonSearchAgain:hover{
+    transition: all 1s linear;
+    border: 1px solid #0C70E8;
+    color:white;
+    background-color: #0C70E8;   
+}
+
+.buttonSearchAgain:active{
+    transform:translateY(4px);
+    transition: all 0.1s linear;
+}
+
 @media screen and (min-width:1000px){
     .contentSearchContainer{
         width: 80;
@@ -179,6 +209,15 @@
     .smallScreenmainContentIndividualContainer{
         width:70%;
     }
+    .buttonHolder{
+        /* background-color: orange; */
+        justify-content: center;
+        margin-bottom:1rem;
+    }
+
+    .buttonSearchAgain{
+        width:80%;
+    }
 }
 
 @media screen and (max-width:600px){
@@ -200,6 +239,10 @@
     .smallScreenmainContentIndividualContainer{
         width:90%;
     }
+
+    /* .buttonSearchAgain{
+        background-color: orange;
+    } */
 }
 
 @media screen and (max-width:550px){
