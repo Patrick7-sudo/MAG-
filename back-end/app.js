@@ -6,7 +6,9 @@ import cors from 'cors';
 import Routers from './route&module/airport_route.js'
 import airlineRouters from './route&module/airline_route.js'
 import routeRouters from './route&module/route_route.js';
-
+import airportIndividual from './route&module/airportIndividual.js';
+import airlineIndividual from "./route&module/airlineSearch.js";
+import airlineNairport from './route&module/airportNairline.js';
 
 const app =express();
 const PORT =  3000;
@@ -17,13 +19,16 @@ app.use(
     origin: "*",
   })
 );
-
+ 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 // console.log({ airline });
-app.use('/airport',Routers)
-app.use('/airline',airlineRouters);
-app.use('/routes',routeRouters)
+app.use('/airportadmin',Routers)
+app.use('/airlineadmin',airlineRouters);
+app.use('/routesadmmin',routeRouters);
+app.use('/airportSearch',airportIndividual);
+app.use('/airlineSearch',airlineIndividual);
+app.use('/airlineairport',airlineNairport);
  
 
 const start = async () =>{

@@ -5,7 +5,8 @@ import query from '../sql/index.js'
 const routeRouters = express.Router()
 
 routeRouters.get('/',async (req,res)=>{
-
+  const hello = req.query;
+  console.log(hello.color)
     const getAllRoutes = await getALL();
     async function getALL(){
         const data = await query(`SELECT routes.Id,CONCAT(airlines.iata_code, ' ',flight_num) AS "Flight Number",
@@ -23,7 +24,11 @@ routeRouters.get('/',async (req,res)=>{
     }
 
     res.status(200).json({status:true,payload:{getAllRoutes}})  
+ 
+
 })
+
+
 
 routeRouters.get('/:id', async(req,res)=>{
     const {id} = req.params;
@@ -50,6 +55,68 @@ routeRouters.get('/:id', async(req,res)=>{
 
     res.status(200).json({status:true,payload:{getRoute}})
 })
+
+// getting everything from airport
+
+// routeRouters.get("/airport", async (req, res) => {
+//   // const hello = req.query;
+  
+//   // console.log(hello.color);
+//   const hello ='hello'
+//   // const getRoute = await getIndividualRoute(hello.color);
+
+//   // async function getIndividualRoute(input) {
+//   //   const data = await query(
+//   //     `SELECT CONCAT(airlines.iata_code, ' ',flight_num) AS "Flight Number",
+//   //       departport.name AS "Departure",departport.location_code_iata AS "IATA Departure Port",
+//   //       depart_time AS "Departure Time",
+//   //       arrivalport.name AS "Arrival",
+//   //       arrivalport.location_code_iata AS "IATA Arrival Port",
+//   //       arrive_time AS "Arrival Time",
+//   //       departDate AS "Departure Date" 
+//   //       FROM routes 
+//   //       JOIN airlines ON airline_id = airlines.id
+//   //       JOIN airport AS departport ON departure = departport.id
+//   //       JOIN airport AS arrivalport ON arrival = arrivalport.id WHERE departport.location_code_iata = $1`,
+//   //     [input]  
+//   //   );
+
+//   //   return data.rows;
+//   // }
+  
+//   res.status(200).json({ status: true, payload:  hello  });
+// }); 
+
+// end of get everythign based on airport
+
+// get airlines based on airport
+// routeRouters.get("/airline", async (req, res) => {
+//   const hello = req.query;
+//   console.log(hello.color);
+
+//   const getRoute = await getIndividualRoute(hello.color);
+
+//   async function getIndividualRoute(input) {
+//     const data = await query(
+//       `SELECT CONCAT(airlines.iata_code, ' ',flight_num) AS "Flight Number",
+//         departport.name AS "Departure",departport.location_code_iata AS "IATA Departure Port",
+//         depart_time AS "Departure Time",
+//         arrivalport.name AS "Arrival",
+//         arrivalport.location_code_iata AS "IATA Arrival Port",
+//         arrive_time AS "Arrival Time",
+//         departDate AS "Departure Date"
+//         FROM routes 
+//         JOIN airlines ON airline_id = airlines.id
+//         JOIN airport AS departport ON departure = departport.id
+//         JOIN airport AS arrivalport ON arrival = arrivalport.id WHERE airlines.iata_code = $1`,
+//       [input]
+//     );
+
+//     return data.rows;
+//   }
+//   res.status(200).json({ status: true, payload: { getRoute } });
+// });
+// end of get airlines based on airport
 
 routeRouters.post('/', async(req,res)=>{
     const rawData =req.body;
